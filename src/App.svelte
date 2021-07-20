@@ -44,13 +44,13 @@
 
 	function startStopwatch() {
 		mode = 'timer';
-		paused = false;
 
 		if (stopwatchTick && !paused) {
 			resetStopwatch();
 			startStopwatch();
 		} else {
 			stopwatchTick = setInterval(() => timerSeconds += 1, 1000);
+			paused = false;
 		}
 	}
 
